@@ -1,0 +1,66 @@
+import "./App.css";
+import perfil from "./assets/portfolio-perfil.jpeg";
+
+import { Carousel } from "./modules/carousel/Carousel";
+
+function App() {
+  return (
+    <>
+      <div className="container">
+        <div className="header">
+          <h1>Hola, Yo soy Francisco Sayago</h1>
+          <div className="description-header">
+            <h3>Full Stack Web Developer</h3>
+          </div>
+          <div className="btn-header">
+            <button>Contactame</button>
+          </div>
+
+          <div className="section1">
+            <div className="aboutMe">
+              <h4>Sobre Mí...</h4>
+              <div className="aboutMe-text">
+                <p>🎓 Estudiante de tercer año de Analista de Sistemas</p>
+                <br />
+                <p>
+                  💻 Desarrollo aplicaciones funcionales y bien estructuradas
+                  usando Angular, React, Node.js, TypeScript y MongoDB
+                </p>
+                <br />
+                <p>
+                  🤖 Certificado en desarrollo backend (Node, AWS) y fundamentos
+                  de IA
+                </p>
+                <br />
+                <p>
+                  🧠 Mente curiosa, trabajo en equipo, siempre con ganas de
+                  aprender
+                </p>
+              </div>
+            </div>
+
+            <div className="photo-text">
+              <p className="text">
+                Mente curiosa, con compromiso por crear soluciones reales.
+              </p>
+              <div className="photo">
+                <img src={perfil} alt="Foto de perfil" />
+              </div>
+            </div>
+          </div>
+
+          <div className="section2"></div>
+
+          <div className="section3">
+            <h3>Stack</h3>
+            <div className="slider-stack">
+              <Carousel />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default App;

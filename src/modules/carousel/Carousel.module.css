@@ -1,0 +1,55 @@
+.container {
+  background-color: #1e3a8a; /* Azul más intenso que resalta */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.swiper {
+  padding: 1rem 0;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card {
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(0.9);
+}
+
+.label {
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

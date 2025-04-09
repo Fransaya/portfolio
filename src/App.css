@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Para que las imágenes no se salgan de sus contenedores */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Tipografía base */
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #121212; /* Fondo oscuro elegante */
+  color: #f1f1f1;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Links sin subrayado y con transición */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+/* Para botones sin estilos nativos feos */
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Scrollbar personalizada (opcional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Títulos con margen general */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Encabezado */
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+.description-header h3 {
+  font-size: 1.5rem;
+  color: #3b82f6; /* Azul moderno */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.btn-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-header button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-header button:hover {
+  background-color: #2563eb;
+}
+
+/* SECCIÓN SOBRE MÍ */
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Texto sobre mí */
+.aboutMe {
+  flex: 1;
+  background-color: #2e2e2e;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.aboutMe h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.aboutMe-text p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #d4d4d4;
+}
+
+/* Foto y texto al lado */
+.photo-text {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.photo-text .text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #facc15; /* amarillo moderno */
+  margin-bottom: 1rem;
+}
+
+.photo-text .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-text img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3b82f6;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
