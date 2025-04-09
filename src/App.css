@@ -1,67 +1,6 @@
 /* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Para que las imágenes no se salgan de sus contenedores */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Tipografía base */
-body {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  background-color: #121212; /* Fondo oscuro elegante */
-  color: #f1f1f1;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Links sin subrayado y con transición */
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease;
-}
-
-/* Para botones sin estilos nativos feos */
-button {
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  font: inherit;
-}
-
-/* Scrollbar personalizada (opcional) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #444;
-  border-radius: 4px;
-}
-
-/* Títulos con margen general */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-/* Contenedor principal */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
 }
 
 /* Encabezado */
@@ -98,6 +37,7 @@ h6 {
   background-color: #2563eb;
 }
 
+/** ------------------- SECCION 1 ----------------------------------*/
 /* SECCIÓN SOBRE MÍ */
 .section1 {
   display: flex;
@@ -156,4 +96,13 @@ h6 {
   object-fit: cover;
   border: 4px solid #3b82f6;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/** ------------------- SECCION 2 ----------------------------------*/
+.section2 {
+}
+
+/** ------------------- SECCION 3 ----------------------------------*/
+.section3 {
+  margin: 50px 0 50px 0;
 }

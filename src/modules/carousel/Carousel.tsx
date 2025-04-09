@@ -1,7 +1,6 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import styles from "./Carousel.module.css";
+// import { Carousel } from "antd";
 
 const tecnologias = [
   {
@@ -31,33 +30,23 @@ const tecnologias = [
   },
 ];
 
-export const Carousel: React.FC = () => {
+export const CarouselComponent: React.FC = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Stack</h2>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={3}
-        className={styles.swiper}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 5 },
-        }}
-      >
-        {tecnologias.map((item) => (
-          <SwiperSlide key={item.tecnologia} className={styles.slide}>
-            <div className={styles.card}>
+      <div className={styles.container_stack}>
+        {tecnologias.map((tec, index) => (
+          <div className={styles.container_stack} key={index}>
+            <div className={styles.tecnologiaCard}>
               <img
-                src={item.imagen}
-                alt={item.tecnologia}
-                className={styles.image}
+                src={tec.imagen}
+                alt={tec.tecnologia}
+                className={styles.tecnologiaImg}
               />
             </div>
-            <span className={styles.label}>{item.tecnologia}</span>
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </div>
     </div>
   );
 };
