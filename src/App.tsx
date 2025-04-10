@@ -2,6 +2,7 @@ import "./App.css";
 import perfil from "./assets/portfolio-perfil.jpeg";
 
 import { CarouselComponent } from "./modules/carousel/Carousel";
+import { Contact } from "./modules/contact/Contact";
 
 function App() {
   return (
@@ -55,6 +56,10 @@ function App() {
             <div className="slider-stack">
               <CarouselComponent />
             </div>
+          </div>
+
+          <div className="section4">
+            <Contact />
           </div>
         </div>
       </div>
