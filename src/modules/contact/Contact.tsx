@@ -9,12 +9,11 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Email: ${email}\nAsunto: ${subject}\nMensaje: ${message}`);
   };
 
   return (
     <div className={styles.form_wrapper}>
-      <h2 className={styles.header}>CONTACT</h2>
+      <h2 className={styles.header}>CONTACTO</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.form_group}>
           <label htmlFor="email">Email</label>
@@ -28,7 +27,7 @@ export const Contact: React.FC = () => {
         </div>
 
         <div className={styles.form_group}>
-          <label htmlFor="subject">Subject</label>
+          <label htmlFor="subject">Asunto</label>
           <input
             type="text"
             id="subject"
@@ -50,7 +49,7 @@ export const Contact: React.FC = () => {
         </div>
 
         <button type="submit" className={styles.submit_button}>
-          Send Message
+          Enviar
         </button>
 
         <hr className={styles.separator} />
@@ -60,7 +59,7 @@ export const Contact: React.FC = () => {
           download
           className={styles.download_button}
         >
-          Download CV
+          Descargar CV
         </a>
 
         <div className={styles.contact_links}>

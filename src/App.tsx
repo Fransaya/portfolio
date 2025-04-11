@@ -1,5 +1,5 @@
 import "./App.css";
-import perfil from "./assets/portfolio-perfil.jpeg";
+import perfil from "./assets/perfil-portfolio_2.jpg";
 
 import { CarouselComponent } from "./modules/carousel/Carousel";
 import { Contact } from "./modules/contact/Contact";
@@ -25,7 +25,7 @@ function App() {
                 <br />
                 <p>
                   💻 Desarrollo aplicaciones funcionales y bien estructuradas
-                  usando Angular, React, Node.js, TypeScript y MongoDB
+                  usando Angular, React, Node.js, TypeScript, MongoDB y MySQL.
                 </p>
                 <br />
                 <p>
