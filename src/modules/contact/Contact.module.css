@@ -71,6 +71,13 @@ textarea {
   background-color: #0056b3;
 }
 
+.container_spinner {
+  display: flex;
+  width: 100;
+  justify-content: center;
+  height: 30px;
+}
+
 .separator {
   margin: 1.5rem 0;
   border: 1px solid #333;
