@@ -12,7 +12,7 @@ const Typewriter = () => {
         instance
           .type("Full Stack Web Developer")
           .pause(2000) // espera 2 segundos
-          .delete(null, { delay: 50 }) // borra todo con velocidad 50ms
+          .delete("true", { delay: 50 }) // borra todo con velocidad 50ms
           .pause(1000) // espera antes de volver a escribir
           .go();
 
