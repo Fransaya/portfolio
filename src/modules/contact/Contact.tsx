@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./Contact.module.css";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 import { Modal } from "antd";
@@ -71,8 +70,9 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className={styles.form_wrapper}>
+    <div className="flex flex-col items-center justify-center p-8">
       {contextHolder}
+
       <Modal
         title="Mensaje enviado"
         open={isModalOpen}
@@ -86,72 +86,110 @@ export const Contact: React.FC = () => {
         <p>En breve me pondré en contacto con vos 🙂</p>
       </Modal>
 
-      <h2 className={styles.header}>CONTACTO</h2>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.form_group}>
-          <label htmlFor="email">Email</label>
+      <h2 className="text-3xl font-bold mb-4 text-white text-center mt-0">
+        CONTACTO
+      </h2>
+
+      <form
+        onSubmit={handleSubmit}
+        className="bg-[#1f1f1f] text-white p-8 rounded-2xl w-full max-w-xl flex flex-col gap-5"
+      >
+        {/* Email */}
+        <div className="flex flex-col w-full">
+          <label htmlFor="email" className="font-bold mb-2">
+            Email
+          </label>
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="p-3 rounded-md bg-[#dcdcdc] text-black text-base"
           />
         </div>
 
-        <div className={styles.form_group}>
-          <label htmlFor="subject">Asunto</label>
+        {/* Subject */}
+        <div className="flex flex-col w-full">
+          <label htmlFor="subject" className="font-bold mb-2">
+            Asunto
+          </label>
           <input
             type="text"
             id="subject"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             required
+            className="p-3 rounded-md bg-[#dcdcdc] text-black text-base"
           />
         </div>
 
-        <div className={styles.form_group}>
-          <label htmlFor="message">Message</label>
+        {/* Message */}
+        <div className="flex flex-col w-full">
+          <label htmlFor="message" className="font-bold mb-2">
+            Message
+          </label>
           <textarea
             id="message"
             rows={5}
             value={messageText}
             onChange={(e) => setMessage(e.target.value)}
             required
+            className="p-3 rounded-md bg-[#dcdcdc] text-black text-base border-2 border-blue-500 resize-none"
           />
         </div>
-        {!sending && (
-          <button type="submit" className={styles.submit_button}>
+
+        {/* Botón Enviar */}
+        {!sending ? (
+          <button
+            type="submit"
+            className="bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-800 transition w-[150px] self-center"
+          >
             Enviar
           </button>
-        )}
-        {sending && (
-          <div className={styles.container_spinner}>
+        ) : (
+          <div className="flex justify-center w-full h-[30px]">
             <Flex align="center" gap="middle">
               <Spin indicator={<LoadingOutlined spin />} size="large" />
             </Flex>
           </div>
         )}
 
-        <hr className={styles.separator} />
+        <hr className="my-6 border border-gray-800" />
 
+        {/* Descargar CV */}
         <a
           href="/FRANCISCO-SAYAGO-CV.pdf"
           download
-          className={styles.download_button}
+          className="bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-800 transition text-center w-fit mx-auto relative z-10"
         >
-          Descargar CV
+          <span className="text-white font-semibold">Descargar CV</span>
         </a>
 
-        <div className={styles.contact_links}>
-          <a href="mailto:fransayasoft@gmail.com">
-            <FaEnvelope /> <span>fransayasoft@gmail.com</span>
+        {/* Redes */}
+        <div className="mt-6 flex justify-around flex-wrap gap-4 text-sm text-white text-center">
+          <a
+            href="mailto:fransayasoft@gmail.com"
+            className="flex items-center gap-2 hover:text-blue-500 transition"
+          >
+            <FaEnvelope />
+            <span>fransayasoft@gmail.com</span>
           </a>
-          <a href="https://linkedin.com/in/francisco-saygo" target="_blank">
-            <FaLinkedin /> <span>/francisco-saygo</span>
+          <a
+            href="https://linkedin.com/in/francisco-saygo"
+            target="_blank"
+            className="flex items-center gap-2 hover:text-blue-500 transition"
+          >
+            <FaLinkedin />
+            <span>/francisco-saygo</span>
           </a>
-          <a href="https://github.com/Fransaya" target="_blank">
-            <FaGithub /> <span>/Fransaya</span>
+          <a
+            href="https://github.com/Fransaya"
+            target="_blank"
+            className="flex items-center gap-2 hover:text-blue-500 transition"
+          >
+            <FaGithub />
+            <span>/Fransaya</span>
           </a>
         </div>
       </form>

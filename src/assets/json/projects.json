@@ -1,0 +1,67 @@
+[
+  {
+    "nombre": "Catafy",
+    "descripcion": "Catafy es un Catalogo online, que apunta a ayudar a tiendas pequeñas y medianas, emprendedores que no pueden costear un e-commerce, permitiendo a cada usuario personalizar su tienda a medida, cargando los productos de forma rapida a su forma y totalmente a su eleccion de lo que quieran mostrar como atributo del producto. Permite tambien que puedan generar un link personalizado y a medida para que pueda compartir el link en sus redes sociales para que sus seguidores puedan ver sus productos activos. Priorizando como objetivo principal la usabilidad, una exelente opcion calidad precio y totalmente personalizable a gusto del usuario",
+    "tecnologias": [
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Node.js",
+      "Express",
+      "JWT",
+      "MongoDB"
+    ],
+    "fechaInicio": "09/24",
+    "fechaFin": "",
+    "estado": "En Progeso",
+    "imagenes": [],
+    "linkRepositorio": "",
+    "linkDemo": "",
+    "caracteristicas": ["Accesible", "Personalizable", "Facil de usar", "SaaS"],
+    "dificultades": "",
+    "aprendizajes": ""
+  },
+  {
+    "nombre": "Sistema de Gestion de Soderia",
+    "descripcion": "Es un sistema de gestion que permite administrar el funcionamiento de soderias, ventas, clientes, pedidos, usuarios con roles y permisos. permitiendo la administracion completa.",
+    "tecnologias": ["Angular.js", "Node.js", "Express", "JWT", "MySQL"],
+    "fechaInicio": "04/24",
+    "fechaFin": "11/24",
+    "estado": "Finalizado",
+    "imagenes": [],
+    "linkRepositorio": "",
+    "linkDemo": "",
+    "caracteristicas": ["Gestion", "Administracion", "Productividad"],
+    "dificultades": "",
+    "aprendizajes": ""
+  },
+  {
+    "nombre": "API de Login",
+    "descripcion": "REST API de un login incluido con oAuth, JWT, Seguridad y Validacion de Tokens.",
+    "tecnologias": ["Node.js", "Express", "oAuth", "JWT", "MongoDB"],
+    "fechaInicio": "05/23",
+    "fechaFin": "06/23",
+    "estado": "Finalizado",
+    "imagenes": [],
+    "linkRepositorio": "",
+    "linkDemo": "",
+    "caracteristicas": ["Seguridad", "Inicio de Sesion", "Autenticación"],
+    "dificultades": "",
+    "aprendizajes": ""
+  },
+  {
+    "nombre": "Sistemas de Ventas y Gestion para Negocio",
+    "descripcion": "Sistema de gestion integral para un negocio de indumentaria, con gestion de ventas, stock, gestion de clientes junto con un sistema de puntos y promociones canjeables",
+    "tecnologias": ["Angular", "Node.js", "MySQL", "Express", "JWT"],
+    "rol": "",
+    "fechaInicio": "",
+    "fechaFin": "",
+    "estado": "Finalizado",
+    "imagenes": [],
+    "linkRepositorio": "",
+    "linkDemo": "",
+    "caracteristicas": ["Versatil", "Gestion", "Ventas", "Promociones"],
+    "dificultades": "",
+    "aprendizajes": ""
+  }
+]

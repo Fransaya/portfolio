@@ -1,5 +1,4 @@
 import React, { useCallback, useRef } from "react";
-import styles from "./Carousel.module.css";
 
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
@@ -73,32 +72,44 @@ export const CarouselComponent: React.FC = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>Stack</h2>
-      <div className={styles.embla}>
-        <div className={styles.emblaViewport} ref={emblaRef}>
-          <div className={styles.emblaContainer}>
+    <div className="bg-blue-600 text-center">
+      <h2 className="text-3xl font-bold m-0 text-white">Stack</h2>
+
+      <div className="relative overflow-hidden w-full pt-2">
+        <div className="overflow-hidden w-full" ref={emblaRef}>
+          <div className="flex gap-6">
             {tecnologias.map((item) => (
-              <div className={styles.emblaSlide} key={item.tecnologia}>
-                <div className={styles.card}>
+              <div
+                key={item.tecnologia}
+                className="flex flex-col items-center flex-[0_0_100%] md:flex-[0_0_33.33%] lg:flex-[0_0_16.9%] sm:flex-[0_0_50%] scroll-snap-align-center"
+              >
+                <div className="bg-[#1f1f1f] rounded-2xl w-[130px] h-[130px] flex items-center justify-center mb-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 ease-in-out">
                   <img
                     src={item.imagen}
                     alt={item.tecnologia}
-                    className={styles.image}
+                    className="h-[90px] object-contain"
                   />
                 </div>
-                <span className={styles.label}>{item.tecnologia}</span>
+                <span className="text-gray-100 text-sm font-medium text-center">
+                  {item.tecnologia}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Botones */}
-        <div className={styles.buttons}>
-          <button className={styles.prev} onClick={scrollPrev}>
+        <div className="absolute top-1/2 left-0 right-0 px-2 sm:px-1 transform -translate-y-1/2 z-10 flex justify-between items-center pointer-events-none">
+          <button
+            onClick={scrollPrev}
+            className="pointer-events-auto bg-white/10 border border-white/20 text-white text-[1.8rem] sm:text-[1.5rem] px-3 py-1 rounded-full shadow-lg hover:bg-white/20 hover:scale-110 transition"
+          >
             ‹
           </button>
-          <button className={styles.next} onClick={scrollNext}>
+          <button
+            onClick={scrollNext}
+            className="pointer-events-auto bg-white/10 border border-white/20 text-white text-[1.8rem] sm:text-[1.5rem] px-3 py-1 rounded-full shadow-lg hover:bg-white/20 hover:scale-110 transition"
+          >
             ›
           </button>
         </div>
