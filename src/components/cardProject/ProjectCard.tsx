@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, JSX } from "react";
 import {
   SiReact,
   SiTypescript,
@@ -25,7 +25,7 @@ export interface Project {
   aprendizajes?: string;
 }
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Partial<Record<string, JSX.Element>> = {
   React: <SiReact className="text-cyan-400" />,
   TypeScript: <SiTypescript className="text-blue-400" />,
   MongoDB: <SiMongodb className="text-green-400" />,
