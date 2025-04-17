@@ -176,7 +176,7 @@ export const Contact: React.FC = () => {
             <span>fransayasoft@gmail.com</span>
           </a>
           <a
-            href="https://linkedin.com/in/francisco-saygo"
+            href="https://www.linkedin.com/in/francisco-sayago-503777260/"
             target="_blank"
             className="flex items-center gap-2 hover:text-blue-500 transition"
           >

@@ -8,19 +8,27 @@ import Typewriter from "./components/Typewriter/Typewriter";
 import "./index.css";
 
 function App() {
+  const scroltToContact = () => {
+    const contactSection = document.getElementById("contacto");
+    contactSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <div className="w-full px-4 sm:px-4 md:px-4 lg:px-4 xl:px-4  min-h-screen">
-      <div className="text-center py-16">
-        <h1 className="text-5xl font-bold text-white">
-          Hola, Yo soy Francisco Sayago
+    <div className="w-full px-5 sm:px-5 md:px-5 lg:px-5 xl:px-5  min-h-screen">
+      <div className="text-center py-25">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white">
+          Hola, soy Francisco Sayago
         </h1>
         <div className="mt-4">
-          <h3 className="text-4xl text-blue-400 font-medium">
+          <h3 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-blue-400 font-medium">
             <Typewriter />
           </h3>
         </div>
         <div className="mt-8 flex justify-center">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-8 py-3 rounded-full shadow-md transition-all duration-300">
+          <button
+            onClick={scroltToContact}
+            className="bg-blue-500 hover:bg-blue-600 text-white font-medium text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 rounded-full shadow-md transition-all duration-300"
+          >
             Contactame
           </button>
         </div>
@@ -72,7 +80,7 @@ function App() {
       </div>
 
       {/* SECCIÓN CONTACTO */}
-      <div>
+      <div id="contacto">
         <Contact />
       </div>
     </div>

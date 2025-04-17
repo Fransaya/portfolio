@@ -2,7 +2,9 @@
 import axios from "axios";
 
 const baseUrl =
-  import.meta.env.VITE_PRODUCTION == 0 ? "http://localhost:3000/" : "url_back";
+  import.meta.env.VITE_PRODUCTION == 0
+    ? "http://localhost:3000/"
+    : "https://portfolio-backend-zltj.onrender.com";
 
 // Configura Axios con una base URL y opciones comunes
 const axiosInstance = axios.create({
