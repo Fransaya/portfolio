@@ -59,15 +59,15 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   const zoomModal = () => {};
 
   return (
-    <div className="bg-zinc-900 rounded-xl shadow-lg p-6 flex flex-col gap-4 w-full max-w-md min-h-130">
+    <div className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl shadow-xl p-6 flex flex-col gap-4 w-full max-w-md min-h-130 hover:shadow-2xl transition-all duration-300">
       <div className="flex justify-between items-center min-h-15">
         <h2 className="text-xl font-semibold text-white">{project.nombre}</h2>
         <span
           className={`text-sm ${
             project.estado == "Finalizado"
-              ? "bg-green-500 hover:bg-green-600 text-white"
-              : "bg-yellow-500 hover:bg-yellow-600 text-white"
-          } text-white px-3 py-1 rounded-full`}
+              ? "bg-green-500/20 text-green-400 border border-green-500/30"
+              : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+          } px-3 py-1 rounded-full`}
         >
           {project.estado || "Sin estado"}
         </span>
@@ -82,7 +82,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
 
       <div className="flex flex-wrap gap-3 text-xl mt-2">
         {project.tecnologias.map((tech) => (
-          <div key={tech} title={tech}>
+          <div key={tech} title={tech} className="hover:scale-110 transition-transform">
             {iconMap[tech] ?? (
               <span className="text-zinc-400 text-sm">{tech}</span>
             )}
@@ -90,16 +90,15 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
         ))}
       </div>
 
-      <div className="flex flex-col bg-zinc-900 rounded-xl shadow-lg overflow-hidden w-full max-w-md">
-        {/* Imagen o galería de imágenes */}
+      <div className="flex flex-col bg-zinc-900/30 rounded-xl shadow-lg overflow-hidden w-full max-w-md">
         <div
-          className="w-full h-48 bg-zinc-800 flex items-center justify-center overflow-hidden"
+          className="w-full h-48 bg-zinc-800/50 flex items-center justify-center overflow-hidden group cursor-pointer"
           onClick={() => openModalImg(project)}
         >
           <img
             src={`/images/${project.imagenes?.[0]}`}
             alt={project.nombre}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
           />
         </div>
       </div>
@@ -108,7 +107,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
         {project.caracteristicas.map((tag) => (
           <span
             key={tag}
-            className="text-sm bg-blue-400 text-white  px-3 py-1 rounded-full"
+            className="text-sm bg-blue-500/20 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full"
           >
             {tag}
           </span>
@@ -120,9 +119,10 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
-        footer={null} // para que no ocupe espacio innecesario abajo
-        width={800} // ajusta el ancho del modal
-        bodyStyle={{ padding: 0 }} // elimina padding del contenido del modal
+        footer={null}
+        width={800}
+        bodyStyle={{ padding: 0 }}
+        className="project-modal"
       >
         <div className="w-full h-[80vh] flex items-center justify-center bg-black">
           <img
